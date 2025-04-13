@@ -29,5 +29,4 @@ file(GLOB_RECURSE src_lvgl src/*.c)
 target_sources(${target} PRIVATE
     ${src_lvgl}
     ${src_lvgl_app}
-    ${src_bsp}
 )

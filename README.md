@@ -13,4 +13,11 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 )
 ```
 
+```
+target_sources(${CMAKE_PROJECT_NAME} PRIVATE
++=> lvgl/bsp/lcd.c
+    # Add user sources here
+)
+```
+
 ioc配置仿照example.ioc
