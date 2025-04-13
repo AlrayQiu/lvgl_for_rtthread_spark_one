@@ -19,5 +19,11 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
 )
 ```
+添加进SysTick_Handler(void)
+```
+lv_tick_inc(1);
+
+// 头文件"lv_hal_tick.h"
+```
 
 ioc配置仿照example.ioc
