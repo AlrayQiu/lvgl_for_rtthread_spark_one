@@ -2,6 +2,8 @@ set(target spark_one_lvgl)
 
 add_library(${target} STATIC)
 
+add_link_options(-u _printf_float)
+
 target_compile_definitions(${target} PUBLIC "-DLV_CONF_INCLUDE_SIMPLE")
 target_compile_definitions(${target} PUBLIC "-DLV_LVGL_H_INCLUDE_SIMPLE")
 
@@ -25,6 +27,7 @@ target_include_directories(${target} PUBLIC ./examples)
 file(GLOB_RECURSE src_lvgl_app examples/*.c)
 file(GLOB_RECURSE src_bsp bsp/*.c)
 file(GLOB_RECURSE src_lvgl src/*.c)
+
 
 target_sources(${target} PRIVATE
     ${src_lvgl}

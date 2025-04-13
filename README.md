@@ -26,4 +26,13 @@ lv_tick_inc(1);
 // 头文件"lv_hal_tick.h"
 ```
 
+```
+
+# Include toolchain file
+include("cmake/gcc-arm-none-eabi.cmake")
+
++=> add_link_options(-u _printf_float)
+
+```
+
 ioc配置仿照example.ioc
