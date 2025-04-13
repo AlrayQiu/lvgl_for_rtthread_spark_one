@@ -24,11 +24,10 @@ target_include_directories(${target} PUBLIC ./examples)
 # app src
 file(GLOB_RECURSE src_lvgl_app examples/*.c)
 file(GLOB_RECURSE src_bsp bsp/*.c)
-
 file(GLOB_RECURSE src_lvgl src/*.c)
 
 target_sources(${target} PRIVATE
     ${src_lvgl}
     ${src_lvgl_app}
-    #{src_bsp}
+    ${src_bsp}
 )
